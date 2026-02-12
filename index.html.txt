@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Ul Tuba ❤️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pink-light: #ffc0cb;
+            --pink-hot: #ff69b4;
+            --glass: rgba(255, 255, 255, 0.25);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--pink-light), var(--pink-hot));
+            background-attachment: fixed;
+            text-align: center;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-top: 40px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        /* --- New: Counter Style --- */
+        #counter {
+            background: var(--glass);
+            width: fit-content;
+            margin: 20px auto;
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            font-weight: 500;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+
+        .message {
+            width: 85%;
+            max-width: 600px;
+            margin: 30px auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            background: var(--glass);
+            padding: 30px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 5px solid white;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.08) rotate(2deg);
+            cursor: pointer;
+        }
+
+        .video-container {
+            margin: 40px auto;
+            width: 80%;
+            max-width: 560px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            margin: 50px 0;
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* --- Floating Hearts Container --- */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.6);
+            animation: rise 10s linear infinite;
+            font-size: 20px;
+        }
+
+        @keyframes rise {
+            0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="hearts-container" id="hearts"></div>
+
+<h1>💖 Noor Ul Tuba 💖</h1>
+<div class="subtitle">From Your Bom Bom 🐱💘</div>
+
+<div id="counter">Loading our time...</div>
+
+<div class="message">
+    Noor, <br><br>
+    Since <b>11 February 2025</b>, my world has been brighter, softer, and full of pink magic — just like you. 🌸<br>
+    Every moment with you feels like a beautiful dream I never want to wake up from.<br><br>
+    Your smile is my favorite view, your voice is my favorite sound, and your love is my favorite place.<br><br>
+    You are my peace, my happiness, my <b>Hello Kitty princess</b> forever. 🎀<br><br>
+    I love you more than words can ever explain.<br>
+    <i>Forever yours, Bom Bom 💕</i>
+</div>
+
+<h2>Our Memories 📸</h2>
+
+
+</div>
+
+<h2>Our Song 🎵</h2>
+<div class="video-container">
+    <iframe width="100%" height="315" 
+    src="https://youtu.be/wWrpR0QX96Q?si=8zYCc-w8cngl_S4i" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+    </iframe>
+</div>
+
+<div class="footer">
+    Made with love by Bom Bom 💗 <br>
+    11 Feb 2025 – Forever ♾️
+</div>
+
+<script>
+    // --- Heart Animation ---
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+        document.getElementById('hearts').appendChild(heart);
+        
+        setTimeout(() => { heart.remove(); }, 10000);
+    }
+    setInterval(createHeart, 500);
+
+    // --- Relationship Counter ---
+    function updateCounter() {
+        const startDate = new Date("February 11, 2025 00:00:00").getTime();
+        const now = new Date().getTime();
+        const diff = now - startDate;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("counter").innerHTML = 
+            `Together for: ${days} Days, ${hours}h, ${minutes}m, ${seconds}s ⏳`;
+    }
+    setInterval(updateCounter, 1000);
+    updateCounter();
+</script>
+
+</body>
+</html>
